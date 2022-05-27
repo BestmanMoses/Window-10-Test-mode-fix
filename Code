@@ -1,0 +1,16 @@
+bcdedit.exe -set laodoptions ENABLE_INTEGRITY_CHECKS
+
+<!-- The below is the most important one-->
+bcdedit.exe -set TESTSIGNING OFF
+
+Note:
+
+bcdedit /set testsigning on. If a message is displayed on the screen reading “The value is protected by Secure 
+Boot policy”, it means Secure Boot is enabled for your computer's UEFI firmware. 
+Disable it in your computer's UEFI Firmware Settings to enable test signing mode via Advanced Startup Options.
+
+How this work:
+How do I get rid of test mode watermark in Windows 10?
+Right-click Command Prompt, and then select Run as administrator. 
+The User Account Control window may appear, if so select Yes. In the Command Prompt window, type the following 
+command bcdedit -set TESTSIGNING OFF and then press Enter . When you see the confirmation, close the Command Prompt window.
